@@ -13,6 +13,9 @@ import reactor.netty.transport.logging.AdvancedByteBufFormat;
 
 import java.util.function.Consumer;
 
+/**
+ * https://docs.spring.io/spring-security/site/docs/5.3.2.RELEASE/reference/html5/#oauth2Client-webclient-servlet
+ */
 @Configuration
 public class WebClientConfig implements WebClientCustomizer {
 
@@ -23,7 +26,7 @@ public class WebClientConfig implements WebClientCustomizer {
     public void customize(WebClient.Builder builder) {
         builder
             .apply(oauth2Configuration())
-            .clientConnector(clientHttpConnector())
+            .clientConnector(clientHttpConnector()) // logging
         ;
     }
 
