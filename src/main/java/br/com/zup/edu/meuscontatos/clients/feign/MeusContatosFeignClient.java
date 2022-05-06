@@ -7,8 +7,7 @@ import java.util.List;
 
 @FeignClient(
     name = "meusContatos",
-    url = "${integrations.feign.meus-contatos.baseUrl}",
-    configuration = OAuth2FeignConfiguration.class
+    url = "${integrations.feign.meus-contatos.baseUrl}"
 )
 public interface MeusContatosFeignClient {
 
