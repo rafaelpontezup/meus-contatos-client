@@ -5,7 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
-@FeignClient(name = "meus-contatos", url = "${integrations.meus-contatos.baseUrl}")
+@FeignClient(
+    name = "meusContatos",
+    url = "${integrations.feign.meus-contatos.baseUrl}",
+    configuration = OAuth2FeignConfiguration.class
+)
 public interface MeusContatosFeignClient {
 
     @GetMapping("/api/contatos")

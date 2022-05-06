@@ -14,7 +14,7 @@ public class MeusContatosWebClient {
     private String meusContatosUri;
 
     public MeusContatosWebClient(WebClient.Builder webClientBuilder,
-                                 @Value("${integrations.meus-contatos.uri}") String meusContatosUri) {
+                                 @Value("${integrations.webclient.meus-contatos.uri}") String meusContatosUri) {
         this.webClient = webClientBuilder.build();
         this.meusContatosUri = meusContatosUri;
     }

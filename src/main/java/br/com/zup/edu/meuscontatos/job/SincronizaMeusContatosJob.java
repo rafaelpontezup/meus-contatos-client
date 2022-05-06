@@ -11,15 +11,21 @@ public class SincronizaMeusContatosJob {
 
     @Autowired
     private MeusContatosWebClient webClient;
-
     @Autowired
     private MeusContatosFeignClient feignClient;
 
     @Scheduled(fixedDelay = 10_000, initialDelay = 5000)
     public void execute() {
-//        webClient.lista()
-//                .stream().forEach(System.out::println);
 
+        System.out.println("-----------------------------------");
+        System.out.println("------------ WebClient ------------");
+        System.out.println("-----------------------------------");
+        webClient.lista()
+                .stream().forEach(System.out::println);
+
+        System.out.println("-----------------------------------");
+        System.out.println("-------------- Feign --------------");
+        System.out.println("-----------------------------------");
         feignClient.lista()
                 .stream().forEach(System.out::println);
     }

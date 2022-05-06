@@ -1,4 +1,4 @@
-package br.com.zup.edu.meuscontatos;
+package br.com.zup.edu.meuscontatos.clients;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
